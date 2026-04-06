@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: radial-gradient(circle, #0a1a2f, #000);
+  color: white;
+  text-align: center;
+}
+
+.tag { color: #00aaff; }
+.desc { color: #ccc; }
+
+/* BARRA */
+.progress-box {
+  width: 300px;
+  margin: 20px auto;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #222;
+  border-radius: 10px;
+}
+
+.progress {
+  width: 85%;
+  height: 100%;
+  background: linear-gradient(90deg, #00aaff, #00ffcc);
+}
+
+/* ROLETA */
+.wheel-box {
+  position: relative;
+  width: 300px;
+  margin: 30px auto;
+}
+
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 25px solid #00aaff; /* 🔥 agora aponta pra baixo */
+  margin: 0 auto;
+}
+
+/* 🔥 ROLETA PROFISSIONAL */
+.wheel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid #00aaff;
+
+  background: conic-gradient(
+    #001f3f 0deg 45deg,
+    #003366 45deg 90deg,
+    #001f3f 90deg 135deg,
+    #003366 135deg 180deg,
+    #001f3f 180deg 225deg,
+    #003366 225deg 270deg,
+    #001f3f 270deg 315deg,
+    #003366 315deg 360deg
+  );
+
+  position: relative;
+  transition: transform 4s ease-out;
+}
+
+/* CENTRO */
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #007bff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BOTÃO */
+#spinBtn {
+  padding: 15px;
+  background: linear-gradient(90deg, #00aaff, #00ffcc); /* igual popup */
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tentativas span {
+  color: #00ffcc;
+}
+
+/* 🔥 POPUP */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #0b1a2a;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  animation: aparecer 0.3s ease;
+}
+
+.popup-content h2 {
+  color: #00aaff;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+}
+
+.popup-content button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #00aaff, #00ffcc);
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.slice-text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform-origin: center;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+/* 🔥 CENTRALIZAÇÃO CORRETA */
+.t1 { transform: rotate(22.5deg) translateY(-110px); }
+.t2 { transform: rotate(67.5deg) translateY(-110px); }
+.t3 { transform: rotate(112.5deg) translateY(-110px); }
+.t4 { transform: rotate(157.5deg) translateY(-110px); }
+.t5 { transform: rotate(202.5deg) translateY(-110px); }
+.t6 { transform: rotate(247.5deg) translate(5%, -110px); }
+.t7 { transform: rotate(292.5deg) translate(5%, -120px); }
+.t8 { transform: rotate(337.5deg) translate(2%, -120px); }
+/* DESCONTOS (azul destaque) */
+.t1, .t2, .t3 {
+  color: #00ccff;
+}
+
+/* 100% (amarelo) */
+.t4 {
+  color: #ffd700;
+}
+
+/* TENTE NOVAMENTE (cinza) */
+.t5 {
+  color: #999;
+}
+
+/* OFERTAS (verde/azul destaque) */
+.t6, .t7, .t8 {
+  color: #00ffcc;
+}
+.slice-text {
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+.t4 {
+  color: #ffd700;
+  text-shadow: 0 0 10px gold;
+}
+.t4 {
+  font-size: 18px; /* aumenta o tamanho */
+}
+/* 🔥 BOTÕES COM EFEITO LED */
+#spinBtn,
+.popup-content button {
+  transition: 0.3s;
+  box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+}
+
+/* 🔥 ANIMAÇÃO PISCANDO */
+#spinBtn,
+.popup-content button {
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #00aaff, 0 0 10px #00aaff;
+  }
+  to {
+    box-shadow: 0 0 15px #00aaff, 0 0 30px #00aaff;
+  }
+}
