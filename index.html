@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Roleta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <p class="tag">⚡ PROMOÇÃO EXCLUSIVA</p>
+
+  <h1>Gire a Roleta e <span>Ganhe Seu Prêmio</span></h1>
+
+  <p class="desc">
+    Produtos premium por apenas o valor do frete.<br>
+    Gire agora e desbloqueie seu desconto exclusivo.
+  </p>
+
+  <!-- BARRA -->
+  <div class="progress-box">
+    <div class="progress-text">
+      847 de 1000 prêmios resgatados <span>85%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+
+  <!-- ROLETA -->
+  <div class="wheel-box">
+    <div class="pointer"></div>
+
+    <div class="wheel" id="wheel">
+      <div class="slice-text t1">75%</div>
+      <div class="slice-text t2">80%</div>
+      <div class="slice-text t3">90%</div>
+      <div class="slice-text t4">100%</div>
+      <div class="slice-text t5">Tente<br>Novamente</div>
+      <div class="slice-text t6">Brinde<br>Especial</div>
+      <div class="slice-text t7">Frete<br>Grátis</div>
+      <div class="slice-text t8">Super<br>Oferta</div>
+      <div class="center-text">GIRE<br>AGORA</div>
+    </div>
+  </div>
+
+  <button id="spinBtn" onclick="spin()">🎰 Girar Roleta</button>
+
+  <p id="tentativas" class="tentativas">
+    Você tem <span>2 tentativas</span> disponíveis
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
